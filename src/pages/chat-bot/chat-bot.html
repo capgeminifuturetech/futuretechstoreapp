@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>chat-bot</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let msg of messages">
+      <ion-avatar item-left>
+        <img src="{{msg.avatar}}">
+      </ion-avatar>
+      <div>
+        {{msg.content}}
+      </div>
+    </ion-item>
+  </ion-list>
+
+  <ion-item>
+    <ion-input type="text" [(ngModel)]="message.content" name="content"></ion-input>
+    <button ion-button color="secondary" (click)="sendMessage()">Send</button>
+  </ion-item>
+</ion-content>

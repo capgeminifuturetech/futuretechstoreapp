@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sign In</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label>Email Address</ion-label>
+    <ion-input type="email" [(ngModel)]="login.email" name="email"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Password</ion-label>
+    <ion-input type="password" [(ngModel)]="login.passWrd" name="passWrd"></ion-input>
+  </ion-item>
+
+  <button ion-button color="secondary" (click)="signOn()">Sign In</button>
+  <button ion-button color="danger" [navPush]="regPage">Create an Account</button>
+
+</ion-content>

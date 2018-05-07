@@ -1,10 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>Home</ion-title>
+    <ion-buttons end *ngIf="loggedIn">
+      <button (click)="signOff()">
+        <ion-icon name="close-circle"></ion-icon>
+        Sign Out
+      </button>
+    </ion-buttons>
   </ion-navbar>
+
+  <ion-toolbar *ngIf="!loggedIn" color="secondary">
+    <button ion-button clear [navPush]="logPage">Sign In</button>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  <h2>Welcome to FutureTechStore</h2>
-  <p>{{distancekm}} - KM</p>
+<ion-content padding *ngIf="loggedIn">
+  <ion-item>
+    <p>{{distancekm}} - KM</p>
+  </ion-item>
+  <ion-fab right bottom>
+    <button ion-fab mini color="accent" (click)="myPagePush(chatbot)">
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-fab>
 </ion-content>
