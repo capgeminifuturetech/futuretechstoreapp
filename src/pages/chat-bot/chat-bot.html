@@ -10,14 +10,12 @@
       <ion-avatar item-left>
         <img src="{{msg.avatar}}">
       </ion-avatar>
-      <div>
-        {{msg.content}}
-      </div>
+      <ion-label>{{msg?.content}}</ion-label>
     </ion-item>
   </ion-list>
 
   <ion-item>
-    <ion-input type="text" [(ngModel)]="message.content" name="content"></ion-input>
+    <ion-input type="text" [(ngModel)]="message.content"></ion-input>
     <button ion-button color="secondary" (click)="sendMessage()">Send</button>
   </ion-item>
 </ion-content>
