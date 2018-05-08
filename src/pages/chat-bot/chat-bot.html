@@ -15,7 +15,7 @@
   </ion-list>
 
   <ion-item>
-    <ion-input type="text" [(ngModel)]="message.content"></ion-input>
+    <ion-input type="text" [(ngModel)]="message?s.content"></ion-input>
     <button ion-button color="secondary" (click)="sendMessage()">Send</button>
   </ion-item>
 </ion-content>

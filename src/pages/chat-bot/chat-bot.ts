@@ -9,7 +9,7 @@ import { ChatbotServiceProvider } from "../../providers/chatbot-service/chatbot-
   templateUrl: "chat-bot.html"
 })
 export class ChatBotPage {
-  message: Message;
+  message: Message={content:"",avatar:""};
   messages: Message[];
 
   constructor(
